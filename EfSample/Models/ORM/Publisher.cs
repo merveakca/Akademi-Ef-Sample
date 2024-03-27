@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EfSample.Models.ORM;
-public class AdminUser : BaseModel
+public class Publisher : BaseModel
 {
-    public string Email { get; set; }
-    public string Password { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
 }

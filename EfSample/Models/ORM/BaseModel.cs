@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EfSample.Models.ORM;
-public class AdminUser : BaseModel
+public class BaseModel
 {
-    public string Email { get; set; }
-    public string Password { get; set; }
+    public int Id { get; set; }
+    public DateTime AddDate { get; set; } = DateTime.Now;
+    public bool IsActive { get; set; }
 }

@@ -15,4 +15,7 @@ public class AkademiLibraryContext : DbContext
 
     public DbSet<Book> Books { get; set; }
     public DbSet<AdminUser> AdminUsers { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Publisher> Publishers { get; set; }
+
 }

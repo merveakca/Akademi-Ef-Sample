@@ -4,6 +4,7 @@ using EfSample.Models.ORM;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EfSample.Migrations
 {
     [DbContext(typeof(AkademiLibraryContext))]
-    partial class AkademiLibraryContextModelSnapshot : ModelSnapshot
+    [Migration("20240327023813_PublisherTable")]
+    partial class PublisherTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,17 +76,12 @@ namespace EfSample.Migrations
                     b.Property<DateTime>("PublishDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("PublisherId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Writer")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("PublisherId");
 
                     b.ToTable("Books");
                 });
@@ -144,13 +142,7 @@ namespace EfSample.Migrations
                         .WithMany()
                         .HasForeignKey("CategoryId");
 
-                    b.HasOne("EfSample.Models.ORM.Publisher", "Publisher")
-                        .WithMany()
-                        .HasForeignKey("PublisherId");
-
                     b.Navigation("Category");
-
-                    b.Navigation("Publisher");
                 });
 #pragma warning restore 612, 618
         }
