@@ -34,6 +34,13 @@ partial class FrmBooks
         txtSearch = new TextBox();
         label1 = new Label();
         label2 = new Label();
+        label3 = new Label();
+        label4 = new Label();
+        txtMinPrice = new TextBox();
+        label5 = new Label();
+        label6 = new Label();
+        txtMaxPrice = new TextBox();
+        btnSearchByPrice = new Button();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
@@ -68,9 +75,9 @@ partial class FrmBooks
         // 
         // txtSearch
         // 
-        txtSearch.Location = new Point(816, 75);
+        txtSearch.Location = new Point(715, 78);
         txtSearch.Name = "txtSearch";
-        txtSearch.Size = new Size(311, 31);
+        txtSearch.Size = new Size(186, 31);
         txtSearch.TabIndex = 3;
         txtSearch.TextChanged += txtSearch_TextChanged;
         // 
@@ -86,17 +93,84 @@ partial class FrmBooks
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new Point(746, 75);
+        label2.Location = new Point(645, 78);
         label2.Name = "label2";
         label2.Size = new Size(64, 25);
         label2.TabIndex = 5;
         label2.Text = "Arama";
+        // 
+        // label3
+        // 
+        label3.AutoSize = true;
+        label3.Location = new Point(645, 136);
+        label3.Name = "label3";
+        label3.Size = new Size(42, 25);
+        label3.TabIndex = 8;
+        label3.Text = "Min";
+        // 
+        // label4
+        // 
+        label4.AutoSize = true;
+        label4.Location = new Point(654, 136);
+        label4.Name = "label4";
+        label4.Size = new Size(17, 25);
+        label4.TabIndex = 7;
+        label4.Text = " ";
+        // 
+        // txtMinPrice
+        // 
+        txtMinPrice.Location = new Point(693, 136);
+        txtMinPrice.Name = "txtMinPrice";
+        txtMinPrice.Size = new Size(186, 31);
+        txtMinPrice.TabIndex = 6;
+        // 
+        // label5
+        // 
+        label5.AutoSize = true;
+        label5.Location = new Point(909, 136);
+        label5.Name = "label5";
+        label5.Size = new Size(45, 25);
+        label5.TabIndex = 11;
+        label5.Text = "Max";
+        // 
+        // label6
+        // 
+        label6.AutoSize = true;
+        label6.Location = new Point(918, 136);
+        label6.Name = "label6";
+        label6.Size = new Size(17, 25);
+        label6.TabIndex = 10;
+        label6.Text = " ";
+        // 
+        // txtMaxPrice
+        // 
+        txtMaxPrice.Location = new Point(960, 136);
+        txtMaxPrice.Name = "txtMaxPrice";
+        txtMaxPrice.Size = new Size(186, 31);
+        txtMaxPrice.TabIndex = 9;
+        // 
+        // btnSearchByPrice
+        // 
+        btnSearchByPrice.Location = new Point(1205, 136);
+        btnSearchByPrice.Name = "btnSearchByPrice";
+        btnSearchByPrice.Size = new Size(112, 34);
+        btnSearchByPrice.TabIndex = 12;
+        btnSearchByPrice.Text = "Search";
+        btnSearchByPrice.UseVisualStyleBackColor = true;
+        btnSearchByPrice.Click += btnSearchByPrice_Click;
         // 
         // FrmBooks
         // 
         AutoScaleDimensions = new SizeF(10F, 25F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(1439, 740);
+        Controls.Add(btnSearchByPrice);
+        Controls.Add(label5);
+        Controls.Add(label6);
+        Controls.Add(txtMaxPrice);
+        Controls.Add(label3);
+        Controls.Add(label4);
+        Controls.Add(txtMinPrice);
         Controls.Add(label2);
         Controls.Add(label1);
         Controls.Add(txtSearch);
@@ -119,4 +193,11 @@ partial class FrmBooks
     private TextBox txtSearch;
     private Label label1;
     private Label label2;
+    private Label label3;
+    private Label label4;
+    private TextBox txtMinPrice;
+    private Label label5;
+    private Label label6;
+    private TextBox txtMaxPrice;
+    private Button btnSearchByPrice;
 }
